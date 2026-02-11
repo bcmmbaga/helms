@@ -100,7 +100,7 @@ jobs:
           # Sync charts using rsync --delete to mirror upstream exactly
           rsync -avc --delete /tmp/upstream/helm/kubernetes-operator/ charts/kubernetes-operator/
           rsync -avc --delete /tmp/upstream/helm/netbird-operator-config/ charts/netbird-operator-config/
-               
+
           # Verify Chart.yaml was synced
           echo "=== Post-sync Chart.yaml versions ==="
           echo "kubernetes-operator:"
@@ -110,8 +110,8 @@ jobs:
           echo "=== Git status after rsync ==="
           git status
           git diff --stat
-      
-      # Extract versions
+
+          # Extract versions
           operator_version=$(grep '^version:' charts/kubernetes-operator/Chart.yaml | awk '{print $2}')
           config_version=$(grep '^version:' charts/netbird-operator-config/Chart.yaml | awk '{print $2}')
           echo "operator_version=$operator_version" >> "$GITHUB_OUTPUT"
@@ -160,7 +160,7 @@ jobs:
 
           # Open PR
           gh pr create \
-            --title "sync operator charts from upstream" \
+            --title "chore: sync operator charts from upstream" \
             --body "$BODY" \
             --base main \
             --head "$BRANCH"
