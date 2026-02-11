@@ -157,4 +157,14 @@ entries:
     urls:
     - https://github.com/netbirdio/helms/releases/download/helm-v0.1.0/netbird-operator-config-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-11T13:16:15.460680123Z"
+  - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2026-02-11T14:16:56.173982699Z"
+    description: NetBird Operator Configuration
+    digest: 5097ff793c460346ac3af0eb2af57250dabfeecad71316c0ed0eb2f92a7fb6df
+    name: netbird-operator-config
+    type: application
+    urls:
+    - https://github.com/bcmmbaga/helms/releases/download/helm-netbird-operator-config-v0.0.1/netbird-operator-config-0.0.1.tgz
+    version: 0.0.1
+generated: "2026-02-11T14:16:56.174016111Z"
